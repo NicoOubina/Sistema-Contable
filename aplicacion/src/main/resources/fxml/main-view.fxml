@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.sistemacontable.facturador.ui.FacturaMainViewController">
+    <center>
+        <VBox spacing="12" padding="15">
+            <Label text="Panel de facturación" styleClass="heading" />
+            <TableView fx:id="tablaFacturas" prefHeight="420">
+                <columns>
+                    <TableColumn fx:id="numeroCol" text="Comprobante" prefWidth="150" />
+                    <TableColumn fx:id="clienteCol" text="Cliente" prefWidth="240" />
+                    <TableColumn fx:id="fechaCol" text="Fecha" prefWidth="110" />
+                    <TableColumn fx:id="baseCol" text="Base" prefWidth="110" />
+                    <TableColumn fx:id="ivaCol" text="IVA" prefWidth="80" />
+                    <TableColumn fx:id="totalCol" text="Total" prefWidth="110" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+    <bottom>
+        <VBox spacing="10" padding="15" styleClass="form-container">
+            <Label text="Nueva factura" styleClass="subheading" />
+            <GridPane hgap="10" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="20" />
+                    <ColumnConstraints percentWidth="30" />
+                    <ColumnConstraints percentWidth="20" />
+                    <ColumnConstraints percentWidth="30" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+
+                <Label text="Número" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="numeroField" promptText="F0001-00000001" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                <Label text="Cliente" GridPane.rowIndex="0" GridPane.columnIndex="2" />
+                <TextField fx:id="clienteField" promptText="Razón social" GridPane.rowIndex="0" GridPane.columnIndex="3" />
+
+                <Label text="Fecha" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <DatePicker fx:id="fechaPicker" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                <Label text="Base imponible" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+                <TextField fx:id="baseField" promptText="100000" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+
+                <Label text="Alicuota IVA" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <TextField fx:id="alicuotaField" promptText="0.21" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                <Button text="Registrar" onAction="#registrarFactura" GridPane.rowIndex="2" GridPane.columnIndex="3"
+                        maxWidth="Infinity" />
+            </GridPane>
+        </VBox>
+    </bottom>
+</BorderPane>
