@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.sistemacontable.facturador.ui.MainViewController">
+            fx:controller="com.sistemacontable.facturador.ui.FacturaMainViewController">
     <center>
         <VBox spacing="12" padding="15">
             <Label text="Panel de facturación" styleClass="heading" />
