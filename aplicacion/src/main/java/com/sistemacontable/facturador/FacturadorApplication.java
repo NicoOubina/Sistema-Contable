@@ -1,17 +1,15 @@
 package com.sistemacontable.facturador;
 
+import com.sistemacontable.facturador.dto.FacturaDTO;
+import com.sistemacontable.facturador.service.FacturaService;
+import com.sistemacontable.facturador.ui.JavaFxApp;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-
-import com.sistemacontable.facturador.dto.FacturaDTO;
-import com.sistemacontable.facturador.service.FacturaService;
-import com.sistemacontable.facturador.util.JavaFxApp;
 
 @SpringBootApplication
 public class FacturadorApplication {
