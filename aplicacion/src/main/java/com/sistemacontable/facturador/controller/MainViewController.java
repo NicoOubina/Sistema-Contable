@@ -1,10 +1,14 @@
-package com.sistemacontable.facturador.ui;
+package com.sistemacontable.facturador.controller;
 
-import com.sistemacontable.facturador.dto.FacturaDTO;
-import com.sistemacontable.facturador.service.FacturaService;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+
+import org.springframework.stereotype.Controller;
+
+import com.sistemacontable.facturador.dto.FacturaDTO;
+import com.sistemacontable.facturador.service.FacturaService;
+
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,7 +19,6 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
-import org.springframework.stereotype.Controller;
 
 @Controller
 public class MainViewController {
