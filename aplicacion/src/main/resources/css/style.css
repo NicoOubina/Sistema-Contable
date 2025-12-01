@@ -1,0 +1,21 @@
+.header {
+    -fx-background-color: #1e3a8a;
+    -fx-padding: 10px;
+}
+
+.title {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.list-view {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #cbd5e1;
+}
